@@ -1,9 +1,16 @@
 import Portis from "@portis/web3";
 import Web3 from "web3";
 
+const myPrivateEthereumNode = {
+  nodeUrl: 'https://goerli.blockscout.com',
+  chainId: 5,
+  nodeProtocol: 'rpc',
+  gasRelayHubAddress: '0xfe7EC2db12986896E1de65eAc210A7015eB816cb',
+};
+
 export const portis = new Portis(
-  "df2102d7-74a4-48fa-a6be-dd03848202d1",
-  "ropsten",
+  "5d6c7c8e-dcd4-4d86-9bd5-503af23b3772",
+  myPrivateEthereumNode,
   { gasRelay: true }
 );
 export const web3 = new Web3(portis.provider);
